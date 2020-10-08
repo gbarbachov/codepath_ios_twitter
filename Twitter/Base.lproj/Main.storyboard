@@ -19,7 +19,7 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cFI-bj-Y8j">
                                 <rect key="frame" x="102.5" y="309.5" width="170" height="48"/>
-                                <color key="backgroundColor" red="0.12204281313407164" green="0.34477144898511941" blue="0.62145806347150256" alpha="0.84705882352941175" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.10761958807893315" green="0.6204463260220292" blue="0.75218588085751292" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="170" id="R1E-Ds-KFm"/>
                                     <constraint firstAttribute="height" constant="48" id="byI-Yx-wTV"/>
@@ -52,10 +52,10 @@
             </objects>
             <point key="canvasLocation" x="-308" y="139"/>
         </scene>
-        <!--Root View Controller-->
+        <!--Home-->
         <scene sceneID="dxi-zc-lgP">
             <objects>
-                <tableViewController id="MHd-De-tgZ" sceneMemberID="viewController">
+                <tableViewController id="MHd-De-tgZ" customClass="HomeTableViewController" customModule="Twitter" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Hmq-Mi-Sau">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -75,7 +75,14 @@
                             <outlet property="delegate" destination="MHd-De-tgZ" id="JmQ-nF-sPc"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="Kif-1G-G6E"/>
+                    <navigationItem key="navigationItem" title="Home" id="Kif-1G-G6E">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="Gp7-M2-xaW">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="onLogout:" destination="MHd-De-tgZ" id="R7B-ul-PzS"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Lc-qp-1jB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -88,6 +95,10 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="EG9-Fm-tdM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.1076195881" green="0.62044632600000005" blue="0.75218588090000005" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="MHd-De-tgZ" kind="relationship" relationship="rootViewController" id="1ei-EE-kUD"/>
