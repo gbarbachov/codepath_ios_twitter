@@ -13,7 +13,7 @@ class LoginViewController: UIViewController {
     @IBAction func onButtonLogin(_ sender: Any) {
         let twitterUrl = "https://api.twitter.com/oauth/request_token"
         TwitterAPICaller.client?.login(url: twitterUrl, success: {
-            self.performSegue(withIdentifier: "toLoginHome", sender: self)
+            self.performSegue(withIdentifier: "loginToHome", sender: self)
         }, failure: { (Error) in
             print("Not logged in")
         })
