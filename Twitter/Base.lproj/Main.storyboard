@@ -61,7 +61,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="tweetCell" rowHeight="120" id="IS1-pY-2r9">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="tweetCell" rowHeight="120" id="IS1-pY-2r9" customClass="TweetCellTableViewCell" customModule="Twitter" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="120"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="IS1-pY-2r9" id="yjd-jN-A13">
@@ -106,6 +106,11 @@
                                         <constraint firstItem="Xvb-JM-dui" firstAttribute="leading" secondItem="f2t-xU-Gba" secondAttribute="trailing" constant="8" id="uf9-Qp-pQb"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="profileImageView" destination="f2t-xU-Gba" id="9oa-Mn-D29"/>
+                                    <outlet property="tweetContent" destination="Xvb-JM-dui" id="w2X-S7-ddg"/>
+                                    <outlet property="userNameLabel" destination="a69-rk-D8p" id="UhR-bq-dEo"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

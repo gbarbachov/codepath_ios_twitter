@@ -19,7 +19,9 @@ class HomeTableViewController: UITableViewController {
         super.viewDidLoad()
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell  = tableView.dequeueReusableCell(withIdentifier: "tweetCell", for: indexPath)
+        let cell  = tableView.dequeueReusableCell(withIdentifier: "tweetCell", for: indexPath) as! TweetCellTableViewCell
+        cell.userNameLabel.text = "User Name"
+        cell.tweetContent.text = "My tweet"
         return cell
     }
     // MARK: - Table view data source
