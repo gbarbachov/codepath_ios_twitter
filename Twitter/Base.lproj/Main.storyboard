@@ -129,7 +129,7 @@
                         <barButtonItem key="rightBarButtonItem" title="Tweet" style="plain" id="Ksd-k5-2FB">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
-                                <segue destination="iqF-Qw-k8k" kind="presentation" id="2x5-VL-F8y"/>
+                                <segue destination="iqF-Qw-k8k" kind="presentation" id="hcl-R7-g1U"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -141,7 +141,7 @@
         <!--Tweet View Controller-->
         <scene sceneID="gij-SG-1i3">
             <objects>
-                <viewController id="Ozy-Qs-EcA" customClass="TweetViewController" sceneMemberID="viewController">
+                <viewController id="Ozy-Qs-EcA" customClass="TweetViewController" customModule="Twitter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="n2e-vw-cGd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -180,12 +180,12 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="tweetTextView" destination="0Od-Ga-IyW" id="qlV-Mv-67e"/>
+                        <outlet property="tweetTextView" destination="0Od-Ga-IyW" id="X9U-vA-jVd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NSW-NZ-Zmi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2607.2463768115945" y="-75"/>
+            <point key="canvasLocation" x="2926" y="139"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="TnS-Ks-iPR">
@@ -227,7 +227,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EZm-YL-00A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1813" y="-42"/>
+            <point key="canvasLocation" x="2032" y="139"/>
         </scene>
     </scenes>
     <resources>

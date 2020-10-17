@@ -23,13 +23,14 @@ class HomeTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //call func loadTweet() when screen is loaded
-        loadTweet()
-        myRefreshControl.addTarget(self, action: #selector(loadTweet), for: .valueChanged)
+        myRefreshControl.addTarget(self, action: #selector(loadTweets), for: .valueChanged)
         tableView.refreshControl = myRefreshControl
     }
     
-    @objc func loadTweet(){
+    override func viewDidAppear(_ animated: Bool){           super.viewDidAppear(animated)
+           self.loadTweets()
+    }
+    @objc func loadTweets(){
         numberOfTweets = 20
         let myUrl = "https://api.twitter.com/1.1/statuses/home_timeline.json"
         let myParams = ["count" : numberOfTweets]
